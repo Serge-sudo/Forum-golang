@@ -1,0 +1,133 @@
+.side_bar{
+  background-color: #12152D;
+  width: 100%;
+  height: 100%;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search_bar{
+  width: 100%;
+  //background-color: #0B1524;
+  box-sizing: border-box;
+  //border: 10px solid #0C0E1D;
+  border-right: none;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box{
+    position: relative;
+    width:75%;
+  }
+
+  .input {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    color: transparent;
+    border-radius: 50px;
+    border:0;
+    background-color: #374D6F;
+    box-sizing: border-box;
+    font-family: Comic Sans MS, serif;
+    font-size: 26px;
+    outline: none;
+    transition: .5s;
+  }
+  .box:hover input{
+    border: 3px solid #374D6F;
+    width: 95%;
+    color: white;
+    background: #3b3640;
+    border-radius: 10px;
+  }
+  .box i{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    color: white;
+    transition: .2s;
+  }
+  .box:hover i{
+    opacity: 0;
+    z-index: -1;
+  }
+
+
+  .add-icon{
+    padding: 5px;
+    font-size: 30px;
+    color: white;
+    border-radius: 49px;
+    background: #374D6F;
+    cursor: pointer;
+  }
+}
+
+
+
+.forums {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+}
+
+.forums::-webkit-scrollbar {
+  width: 8px;
+}
+
+.forums::-webkit-scrollbar-track {
+  background-color: #26314F;
+  border-radius: 10px;
+}
+
+.forums::-webkit-scrollbar-thumb {
+  background-color: #0d0c0c;
+  border-radius: 11px;
+}
+
+.forums::-webkit-scrollbar-button {
+  background-color: #12152d;
+}
+
+
+.forums ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.forums li {
+  list-style-type: none;
+  margin: 0;
+  flex-direction: row;
+  display: flex;
+  gap: 10px;
+  width: 85%;
+  padding: 5px 5px;
+  background-color: #4b567c;
+  border-radius: 0 5px 5px 0;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  overflow: hidden;
+  &:hover{
+    background: #39415c;
+  }
+}

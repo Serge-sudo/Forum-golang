@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  app:
+    build: ./backend/
+    ports:
+      - "8080"
+    depends_on:
+      - db
+  db:
+    image: mongo:latest
+    ports:
+      - "27017"
+  frontend:
+    build: ./frontend/
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+
+
+
